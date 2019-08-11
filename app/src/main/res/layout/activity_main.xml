@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECF0F1"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/RecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="60dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/AmountPopup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/popup"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        >
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="USER NAME"
+            android:textSize="25dp"
+            android:textAlignment="center"
+            android:textColor="#333"
+            android:layout_margin="6dp"
+            />
+        <EditText
+            android:id="@+id/EditAmount"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/textfield"
+            android:layout_margin="10dp"
+            android:textColor="#fff"
+            android:padding="12dp"
+            android:hint="Amount"
+            android:inputType="numberDecimal"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:onClick="chip10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="+10"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:textColor="#fff"
+                android:background="@drawable/chip"/>
+            <TextView
+                android:onClick="chip50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_weight="1"
+                android:text="+50"
+                android:layout_marginLeft="10dp"
+                android:padding="15dp"
+                android:textColor="#fff"
+                android:background="@drawable/chip"/>
+            <TextView
+                android:onClick="chip100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="+100"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:padding="15dp"
+                android:textColor="#fff"
+                android:background="@drawable/chip"/>
+            <TextView
+                android:onClick="chip1000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="+1000"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:padding="15dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#fff"
+                android:background="@drawable/chip"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADD"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:onClick="AddAmount"
+            android:background="@drawable/button"
+            android:textColor="#fff"
+            android:textSize="16dp"
+            />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SUBTRACT"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:onClick="SubAmount"
+                android:background="@drawable/button"
+                android:textColor="#fff"
+                android:textSize="16dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/AddPopup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/popup"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FRIEND NAME"
+            android:textSize="25dp"
+            android:textAlignment="center"
+            android:textColor="#333"
+            android:layout_margin="6dp"
+            />
+        <EditText
+            android:id="@+id/txtUsername"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/textfield"
+            android:layout_margin="10dp"
+            android:textColor="#fff"
+            android:padding="12dp"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:textColorHint="#fff"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add To List"
+            android:layout_margin="10dp"
+            android:background="@drawable/button"
+            android:textColor="#fff"
+            android:onClick="AddUser"
+            />
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:srcCompat="@drawable/add" />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-8868204021755122/4820296584"
+        android:layout_gravity="bottom|center"
+        ></com.google.android.gms.ads.AdView>
+
+
+</android.support.design.widget.CoordinatorLayout>
